@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
 import News from "./components/news";
+import { createClient } from "@/utils/supabase/server";
+import { redirect } from "next/navigation";
 
 
 export default async function Index() {
@@ -12,7 +14,7 @@ export default async function Index() {
                     <h3 className="text-md text-slate-400">Кузнецкий индустриальный техникум</h3>
                     <h1 className="text-3xl text-slate-700 font-black">Электронная библиотека</h1>
                 </div>
-                <p className="text-md text-slate-500">Перед тем как начать пользования электронной библиотекой техникума, необходимо войти в аккаунт, нажмите на кнопку снизу, чтобы начать.</p>
+                <p className="text-md text-slate-500">Исследуйте книги, пишите рефераты, дипломные работы благодаря нашей электронной библиотеке. Для того чтобы начать, нажмите на кнопку ниже.</p>
                 <Button asChild className="p-7 mt-7" variant={"outline"}>
                     <Link href={"/login"}>Приступить</Link>
                 </Button>
